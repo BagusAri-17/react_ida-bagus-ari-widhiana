@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+</head>
+<body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <form>
+        <div class="group-form">
+            <label for="product-name">Product name : </label><br>
+            <input type="text" name="product-name" minlength="6" maxlength="50" required />
+        </div>
+
+        <div class="group-form">
+            <label for="product-category">Product Category : </label><br>
+            <select name="product-category" required>
+                <option value="" selected></option>
+                <option value="1">Shirt</option>
+                <option value="2">Jacket</option>
+            </select>
+        </div>
+
+        <div class="group-form">
+            <p>Product Freshness : </p>
+            <label for="brand-new">
+                <input type="radio" name="brand-new" value="Brand New" required />
+                Brand new
+            </label>
+            <label for="second-hank"><br>
+                <input type="radio" name="second-hank" value="Second Hank" required />
+                Second hank
+            </label>
+            <label for="refurbished"><br>
+                <input type="radio" name="refurbished" value="Refurbished" required />
+                Refurbished
+            </label>
+        </div>
+
+        <div class="group-form">
+            <label for="product-image">
+                Image of Products
+                <input type="file" name="product-image" value="image" required />
+            </label>
+        </div>
+
+        <div class="group-form">
+            <label for="product-description">Aditional Description</label><br>
+            <textarea name="product-description" required></textarea>
+        </div>
+
+        <div class="group-form">
+            <label for="product-price">Product Price : </label><br>
+            <input type="number" name="product-price" placeholder="$ 100" min="1" required />
+        </div>
+
+        <div class="group-form">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

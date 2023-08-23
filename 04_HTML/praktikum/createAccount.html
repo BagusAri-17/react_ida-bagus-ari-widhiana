@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <h2>Detail Form</h2>
+
+    <form>
+        <div>
+            <label for="first-name">First name :</label><br>
+            <input type="text" name="first-name" required />
+        </div>
+        
+        <div>
+            <label for="last-name">Last name :</label><br>
+            <input type="text" name="last-name" required />
+        </div>
+
+        <div>
+            <label for="user-name">Username :</label><br>
+            <input type="text" name="user-name" required />
+        </div>
+
+        <div>
+            <label for="email">Email :</label><br>
+            <input type="email" name="email" required />
+        </div>
+
+        <div>
+            <p>Gender : </p>
+            <label for="male">
+                <input type="radio" name="male" value="Male" required />
+                Male
+            </label>
+            <label for="female"><br>
+                <input type="radio" name="female" value="Female" required />
+                Female
+            </label>
+            <label for="other"><br>
+                <input type="radio" name="other" value="Other" required />
+                Other
+            </label>
+        </div>
+
+        <div>
+            <label for="address-1">Address</label><br>
+            <input type="text" name="address-1" required />
+        </div>
+
+        <div>
+            <label for="address-2">Address 2</label><br>
+            <input type="text" name="address-2" required />
+        </div>
+
+        <div>
+            <p>Nasionality : </p>
+            <div>
+                <label for="nasionality">Nasionality : </label><br>
+                <select name="nasionality" required>
+                    <option value="" selected></option>
+                    <option value="1">Indonesian</option>
+                    <option value="2">English</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Language Spoken : </p>
+                <label for="indonesia">
+                    <input type="checkbox" name="indonesia" value="Indonesia" required />
+                    Indonesia
+                </label>
+                <label for="english"><br>
+                    <input type="checkbox" name="english" value="English" required />
+                    English
+                </label>
+                <label for="other-language"><br>
+                    <input type="checkbox" name="other-language" value="Other Language" required />
+                    Other
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button onclick="window.location.href='landingPage.html'" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
