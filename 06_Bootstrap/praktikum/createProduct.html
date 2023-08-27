@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+    <link rel="stylesheet" href="./styling/createProduct.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simple Header</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-white bg-primary rounded px-3" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Features</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Title -->
+            <section id="title" class="pt-4 d-flex flex-column justify-content-center align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/bootstrap-logo.svg" alt="Bootstrap" />
+                </a>
+                <h1 class="text-center fw-medium pt-2">Create Product</h1>
+                <p class="text-center fw-light pt-1">
+                    Below is an example form built entirely with Bootstrap’s form
+                    controls. Each required form group has a validation state that can
+                    be triggered by attempting to submit the form without completing it.
+                </p>
+            </section>
+
+            <!-- Detail Product -->
+            <section id="detail-product" class="container pt-4 pb-4">
+                <h1 class="fw-medium">Detail Product</h1>
+                <form class="needs-validation" novalidate>
+                    <div class="group-form mb-3">
+                        <label for="product-name" class="form-label">Product name :
+                        </label>
+                        <input type="text" class="form-control" name="product-name" minlength="6" maxlength="50"
+                            required />
+                        <div class="valid-feedback">Cool Name</div>
+                        <div class="invalid-feedback">Please give your name</div>
+                    </div>
+
+                    <div class="group-form mb-3">
+                        <label for="product-category" class="form-label">Product Category :
+                        </label>
+                        <select name="product-category" class="form-select" required>
+                            <option value="" selected>Choose</option>
+                            <option value="1">Shirt</option>
+                            <option value="2">Jacket</option>
+                        </select>
+                    </div>
+
+                    <div class="group-form mb-3">
+                        <div class="d-flex flex-column">
+                            <label for="product-image" class="form-label">Image of Products</label>
+                            <input type="file" class="form-control form input-forms" name="product-image"
+                                value="#000000" required />
+                        </div>
+                    </div>
+
+                    <div class="group-form mb-3">
+                        <label class="form-label">Product Freshness :</label>
+                        <div class="d-flex flex-column">
+                            <label for="brand-new">
+                                <input type="radio" name="brand-new" value="Brand New" required />
+                                Brand new
+                            </label>
+                            <label for="second-hank">
+                                <input type="radio" name="second-hank" value="Second Hank" required />
+                                Second hank
+                            </label>
+                            <label for="refurbished">
+                                <input type="radio" name="refurbished" value="Refurbished" required />
+                                Refurbished
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="group-form mb-3">
+                        <div class="d-flex flex-column">
+                            <label for="product-description" class="form-label">Aditional Description</label>
+                            <textarea name="product-description" class="form-control" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="group-form mb-3">
+                        <label for="product-price" class="form-label">Product Price : </label><br />
+                        <input type="number" class="form-control" name="product-price" placeholder="$ 100" min="1"
+                            required />
+                    </div>
+
+                    <div class="group-form">
+                        <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Submit
+                        </button>
+                    </div>
+
+                    <div class="modal fade" tabindex="-1" id="exampleModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Detail Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Product details added successfully</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        Save changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (() => {
+            "use strict";
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll(".needs-validation");
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach((form) => {
+                form.addEventListener(
+                    "submit",
+                    (event) => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
+    </script>
+</body>
+
+</html>
