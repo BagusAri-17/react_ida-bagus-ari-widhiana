@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="./styling/createAccount.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simple Header</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-white bg-primary rounded px-3" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Features</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Title -->
+            <section id="title" class="pt-4 d-flex flex-column justify-content-center align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/bootstrap-logo.svg" alt="Bootstrap" />
+                </a>
+                <h1 class="text-center fw-medium pt-2">Create Product</h1>
+                <p class="text-center fw-light pt-1">
+                    Below is an example form built entirely with Bootstrap’s form
+                    controls. Each required form group has a validation state that can
+                    be triggered by attempting to submit the form without completing it.
+                </p>
+            </section>
+
+            <!-- Detail Form -->
+            <section id="detail-form" class="container pt-4 pb-4">
+                <h1 class="fw-medium mb-4">Detail Form</h1>
+                <form class="needs-validation" novalidate>
+                    <div class="row justify-content-center mb-4">
+
+                        <!-- First Name -->
+                        <div class="col-md-6">
+                            <label for="first-name" class="form-label">First name :</label>
+                            <input id="first-name" type="text" name="first-name" class="form-control" required />
+                            <div class="valid-feedback">Looks Cool</div>
+                            <div class="invalid-feedback">Not Looks Cool</div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="col-md-6">
+                            <label for="last-name" class="form-label">Last name :</label>
+                            <input id="last-name" type="text" name="last-name" class="form-control" required />
+                            <div class="valid-feedback">Looks Cool</div>
+                            <div class="invalid-feedback">Not Looks Cool</div>
+                        </div>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="mb-4">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input id="username" type="text" name="username" class="form-control" required />
+                            <div class="valid-feedback">Looks Cool</div>
+                            <div class="invalid-feedback">Not Looks Cool</div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Email :</label>
+                        <input id="email" type="email" name="email" class="form-control" required />
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="mb-4">
+                        <label class="form-label">Gender :</label>
+                        <div class="d-flex items-center gap-2">
+                            <input id="male" class="form-check-input" type="radio" name="gender" value="Male"
+                                required />
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="d-flex items-center gap-2">
+                            <input id="female" class="form-check-input" type="radio" name="gender" value="Female"
+                                required />
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="d-flex items-center gap-2">
+                            <input id="other" class="form-check-input" type="radio" name="gender" value="Other"
+                                required />
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <!-- Address 1 -->
+                    <div class="mb-4">
+                        <label for="address-1" class="form-label">Address</label>
+                        <input id="address-1" type="text" name="address-1" class="form-control" required />
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Address 2 -->
+                    <div class="mb-4">
+                        <label for="address-2" class="form-label">Address 2</label>
+                        <input id="address-2" type="text" name="address-2" class="form-control" required />
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Nasionality -->
+                    <div class="mb-4">
+                        <label for="nasionality" class="form-label">Nasionality : </label>
+                        <select id="nasionality" name="nasionality" class="form-select" required>
+                            <option value="" selected>Choose</option>
+                            <option value="indonesia">Indonesian</option>
+                            <option value="english">English</option>
+                        </select>
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Language -->
+                    <div class="mb-4">
+                        <div class="border-1 border-top mb-1"></div>
+                        <label class="form-label">Language Spoken :</label>
+                        <div class="d-flex gap-2">
+                            <input id="indonesia" class="form-check-input" type="checkbox" name="language"
+                                value="Indonesia" required />
+                            <label for="indonesia">Indonesia</label>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <input id="english" class="form-check-input" type="checkbox" name="language" value="English"
+                                required />
+                            <label for="english">English</label>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <input id="other-language" class="form-check-input" type="checkbox" name="language"
+                                value="Other Language" required />
+                            <label for="other-language">Other</label>
+                        </div>
+                    </div>
+
+                    <!-- Button For Submit -->
+                    <div class="mb-4">
+                        <button type="submit" class="btn btn-primary w-100">
+                            Create Account
+                        </button>
+                    </div>
+
+
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation');
+
+            let firstName = document.querySelector('#first-name');
+            let lastName = document.querySelector('#last-name');
+            let username = document.querySelector('#username');
+            let email = document.querySelector('#email');
+            let genders = document.querySelectorAll('input[name="gender"]');
+            let addressOne = document.querySelector('#address-1');
+            let addressTwo = document.querySelector('#address-2');
+            let nasionality = document.querySelector('#nasionality');
+            let languages = document.querySelectorAll('input[name="language"]');
+
+            let selectGender = "";
+            let selectLanguage = "";
+
+            // perubahan Nilai dari Genders
+            genders.forEach((gender) => {
+                gender.addEventListener('change', () => {
+                    selectGender = document.querySelector('input[name="gender"]:checked').value;
+                    console.log(selectGender);
+                });
+            });
+
+            // perubahan value dari language
+            languages.forEach((language) => {
+                language.addEventListener('change', () => {
+                    selectLanguage = []
+                    languages.forEach((language) => {
+                        if (language.checked) {
+                            selectLanguage.push(language.value);
+                        }
+                    });
+                    console.log(selectLanguage)
+                });
+            });
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else if (form.checkValidity) {
+                        alert(
+                            `
+                            FirstName: ${firstName.value}
+                            LastName: ${lastName.value}
+                            Username: ${username.value}
+                            Email: ${email.value}
+                            Address 1: ${addressOne.value}
+                            Address 2: ${addressTwo.value}
+                            Gender: ${selectGender}
+                            Nasionality: ${nasionality.value}
+                            Language: ${selectLanguage}
+                            `
+                        );
+                    }
+
+                    form.classList.add('was-validated');
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product</title>
+    <link rel="stylesheet" href="./styling/createProduct.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Simple Header</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-white bg-primary rounded px-3" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Features</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-primary" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Title -->
+            <section id="title" class="pt-4 d-flex flex-column justify-content-center align-items-center">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/bootstrap-logo.svg" alt="Bootstrap" />
+                </a>
+                <h1 class="text-center fw-medium pt-2">Create Product</h1>
+                <p class="text-center fw-light pt-1">
+                    Below is an example form built entirely with Bootstrap’s form
+                    controls. Each required form group has a validation state that can
+                    be triggered by attempting to submit the form without completing it.
+                </p>
+            </section>
+
+            <!-- Detail Product -->
+            <section id="detail-product" class="container pt-4 pb-4">
+                <h1 class="fw-medium">Detail Product</h1>
+                <form id="form" class="needs-validation" novalidate>
+                    <!-- Product Name -->
+                    <div class="group-form mb-3">
+                        <label for="product-name" class="form-label">Product name :
+                        </label>
+                        <input id="product-name" type="text" class="form-control" name="product-name" minlength="10"
+                            maxlength="25" required />
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Product Category -->
+                    <div class="group-form mb-3">
+                        <label for="product-category" class="form-label">Product Category :
+                        </label>
+                        <select id="product-category" name="product-category" class="form-select" required>
+                            <option value="" selected>Choose</option>
+                            <option value="shirt">Shirt</option>
+                            <option value="jacket">Jacket</option>
+                        </select>
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="group-form mb-3">
+                        <div class="d-flex flex-column">
+                            <label for="product-image" class="form-label">Image of Products</label>
+                            <input id="product-image" type="file" class="form-control form input-forms"
+                                name="product-image" value="" required />
+                        </div>
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Product Freshness -->
+                    <div class="group-form mb-3">
+                        <label class="form-label">Product Freshness :</label>
+                        <div class="d-flex align-content-center gap-2">
+                            <input class="form-check-input" type="radio" name="product-freshness" value="brand-new"
+                                required />
+                            <label for="brand-new">Brand new</label>
+                        </div>
+                        <div class="d-flex align-content-center gap-2">
+                            <input class="form-check-input" type="radio" name="product-freshness" value="second-hank"
+                                required />
+                            <label for="second-hank">Second hank</label>
+                        </div>
+                        <div class="d-flex align-content-center gap-2">
+                            <input class="form-check-input" type="radio" name="product-freshness" value="refurbished"
+                                required />
+                            <label for="refurbished">Refurbished</label>
+                        </div>
+                    </div>
+
+                    <!-- Product Description -->
+                    <div class="group-form mb-3">
+                        <div class="d-flex flex-column">
+                            <label for="product-description" class="form-label">Aditional Description</label>
+                            <textarea id="product-description" name="product-description" class="form-control"
+                                required></textarea>
+                            <div class="valid-feedback">Looks Cool</div>
+                            <div class="invalid-feedback">Not Looks Cool</div>
+                        </div>
+                    </div>
+
+                    <!-- Product Price -->
+                    <div class="group-form mb-3">
+                        <label for="product-price" class="form-label">Product Price : </label><br />
+                        <input id="product-price" type="number" class="form-control" name="product-price"
+                            placeholder="$ 100" min="1" required />
+                        <div class="valid-feedback">Looks Cool</div>
+                        <div class="invalid-feedback">Not Looks Cool</div>
+                    </div>
+
+                    <!-- Button For Submit -->
+                    <div class="group-form">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                    <div class="modal fade" tabindex="-1" id="exampleModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Detail Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Product details added successfully</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        Save changes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./js/createProduct.js">
+        
+    </script> -->
+    <script>
+        (() => {
+            "use strict";
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll(".needs-validation");
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach((form) => {
+                form.addEventListener(
+                    "submit",
+                    (event) => {
+                        let name = document.querySelector("#product-name").value;
+                        let category = document.querySelector("#product-category").value;
+                        let image = document.querySelector("#product-image").value;
+                        let freshnesss = document.querySelectorAll(
+                            'input[name="freshness"]'
+                        );
+                        let selectFreshness = "";
+                        let description = document.querySelector(
+                            "#product-description"
+                        ).value;
+                        let price = document.querySelector("#product-price").value;
+
+                        freshnesss.forEach((freshness) => {
+                            freshness.addEventListener("change", () => {
+                                selectFreshness = document.querySelector(
+                                    'input[name="freshness"]:checked'
+                                ).value;
+                                console.log(selectGender);
+                            });
+                        });
+                        // Bila Field Product Name lebih dari 10 karakter
+                        if (name.length > 10) {
+                            alert("Last Name must not exceed 25 characters.");
+                        }
+
+                        // Bila Field Product Name kosong
+                        if (name.length == 0) {
+                            alert("Please enter a valid Product name.");
+                        }
+
+                        // Bila Field Product Price kosong
+                        if (price.length == 0) {
+                            alert("Please enter a valid Product price.");
+                        }
+
+                        // Bila Field Product Name mengandung symbol @#{}
+                        if (
+                            name.includes("@") ||
+                            name.includes("#") ||
+                            name.includes("{") ||
+                            name.includes("}")
+                        ) {
+                            alert("Name must not contain symbols.");
+                        }
+
+                        // Bila Field Kosong
+                        if (category == "") {
+                            alert("The Category field must be filled in");
+                        }
+                        if (freshnesss == "") {
+                            alert("The Freshness field must be filled in");
+                        }
+                        if (image == "") {
+                            alert("The Image field must be filled in");
+                        }
+                        if (description == "") {
+                            alert("The description field must be filled in");
+                        }
+
+                        // UI Validasi Bootstrap
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                        form.classList.add("was-validated");
+                    },
+                    false
+                );
+            });
+        })();
+    </script>
+</body>
+
+</html>
